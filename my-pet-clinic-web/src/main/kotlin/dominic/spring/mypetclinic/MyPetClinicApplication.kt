@@ -1,6 +1,6 @@
 package dominic.spring.mypetclinic
 
-import dominic.spring.mypetclinic.controllers.*
+import dominic.spring.mypetclinic.controllers.examples.*
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 

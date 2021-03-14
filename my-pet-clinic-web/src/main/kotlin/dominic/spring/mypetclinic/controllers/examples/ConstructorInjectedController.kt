@@ -1,4 +1,4 @@
-package dominic.spring.mypetclinic.controllers
+package dominic.spring.mypetclinic.controllers.examples
 
 import dominic.spring.mypetclinic.services.GreetingService
 import org.springframework.beans.factory.annotation.Qualifier

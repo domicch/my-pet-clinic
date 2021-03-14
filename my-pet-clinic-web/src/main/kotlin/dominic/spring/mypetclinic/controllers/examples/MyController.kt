@@ -1,15 +1,13 @@
-package dominic.spring.mypetclinic.controllers
+package dominic.spring.mypetclinic.controllers.examples
 
 import dominic.spring.mypetclinic.services.GreetingService
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Controller
 
 @Controller
-class I18nController(
-    @Qualifier("i18nService")
+class MyController (
     private val greetingService: GreetingService
-) {
-    fun sayGreeting(): String{
+        ) {
+    fun sayHello(): String {
         return greetingService.sayGreeting()
     }
 }

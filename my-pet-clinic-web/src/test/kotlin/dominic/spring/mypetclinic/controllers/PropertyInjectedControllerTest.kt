@@ -1,9 +1,9 @@
 package dominic.spring.mypetclinic.controllers
 
+import dominic.spring.mypetclinic.controllers.examples.PropertyInjectedController
 import dominic.spring.mypetclinic.services.GreetingServiceImpl
 import org.junit.jupiter.api.Test
 
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 
 class PropertyInjectedControllerTest {
