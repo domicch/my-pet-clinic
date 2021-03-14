@@ -1,5 +1,5 @@
 package dominic.spring.mypetclinic.model
 
-class PetType {
+class PetType: BaseEntity(){
     var name: String? = null
 }
