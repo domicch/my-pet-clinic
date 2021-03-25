@@ -4,10 +4,10 @@ import dominic.spring.mypetclinic.model.Owner
 import dominic.spring.mypetclinic.model.Pet
 import dominic.spring.mypetclinic.model.Vet
 import dominic.spring.mypetclinic.services.CrudService
+import dominic.spring.mypetclinic.services.VetService
+import org.springframework.stereotype.Service
 
-class VetServiceMap: AbstractMapService<Vet, Long>(), CrudService<Vet, Long> {
-    override fun save(obj: Vet): Vet {
-        return super.save(obj.id!!, obj)
-    }
+@Service
+class VetServiceMap: AbstractMapService<Vet, Long>(), VetService {
 
 }

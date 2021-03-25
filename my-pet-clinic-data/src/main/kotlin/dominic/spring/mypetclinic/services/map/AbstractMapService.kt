@@ -1,28 +1,37 @@
 package dominic.spring.mypetclinic.services.map
 
-abstract class AbstractMapService<T, ID> {
-    protected val map = mutableMapOf<ID, T>()
+import dominic.spring.mypetclinic.model.BaseEntity
 
-    fun findAll(): Set<T> {
+abstract class AbstractMapService<T: BaseEntity, ID: Long> {
+    protected val map = mutableMapOf<Long, T>()
+
+    @Synchronized fun findAll(): Set<T> {
         return map.values.toSet()
     }
 
-    fun findById(id: ID): T? {
+    @Synchronized fun findById(id: Long): T? {
         return map[id]
     }
 
-    fun save(id: ID, obj: T): T{
+    @Synchronized fun save(obj: T): T{
+        var id = obj.id
+        if(id == null) {
+            id = getNextId()
+            obj.id = id
+        }
         map[id] = obj
         return obj
     }
 
-
-
-    fun deleteById(id: ID){
+    @Synchronized fun deleteById(id: Long){
         map.remove(id)
     }
 
-    fun delete(obj: T){
-        map.entries.removeIf{e -> e.value?.equals(obj)?:false }
+    @Synchronized fun delete(obj: T){
+        map.entries.removeIf{e -> e.value.equals(obj) }
+    }
+
+    private fun getNextId(): Long{
+        return (map.size+1).toLong()
     }
 }
