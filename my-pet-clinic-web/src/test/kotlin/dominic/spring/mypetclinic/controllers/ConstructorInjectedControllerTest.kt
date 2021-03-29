@@ -1,7 +1,7 @@
 package dominic.spring.mypetclinic.controllers
 
 import dominic.spring.mypetclinic.controllers.examples.ConstructorInjectedController
-import dominic.spring.mypetclinic.services.GreetingServiceImpl
+import dominic.spring.mypetclinic.services.sample.GreetingServiceImpl
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.BeforeEach

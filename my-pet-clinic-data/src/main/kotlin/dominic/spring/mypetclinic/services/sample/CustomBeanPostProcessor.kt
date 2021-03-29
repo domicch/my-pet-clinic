@@ -1,4 +1,4 @@
-package dominic.spring.mypetclinic.services
+package dominic.spring.mypetclinic.services.sample
 
 import org.springframework.beans.factory.config.BeanPostProcessor
 import org.springframework.beans.BeansException

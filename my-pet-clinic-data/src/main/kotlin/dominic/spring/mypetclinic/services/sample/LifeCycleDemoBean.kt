@@ -1,4 +1,4 @@
-package dominic.spring.mypetclinic.services
+package dominic.spring.mypetclinic.services.sample
 
 import javax.annotation.PreDestroy
 
